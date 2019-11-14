@@ -1,4 +1,5 @@
 # Saturn-Image-Site
+
 This is a site I built relying heavily on CSS-Grid and a few different versions of a JS file to populate the grid with random images from the img folder.
 
 The inspiration and large portion of the code came from Wes Bos' CSS grid class found at <a href="https://cssgrid.io/">https://cssgrid.io/</a>.
@@ -9,3 +10,4 @@ Mostly they change the way the grid is populated. I did not like the repeating i
 
 I would like to experiment more with a better way to randomize numbers with no repeats, possibly a <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">fisher-yates shuffle</a>.
 
+Deployed rather hastily at <a href="https://inspiring-archimedes-1db9da.netlify.com/">https://inspiring-archimedes-1db9da.netlify.com/</a>
