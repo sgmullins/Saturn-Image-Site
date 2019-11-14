@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  font-family: sans-serif;
+  background: black;
+  /* background: url(./imgs/background-stars.jpg); */
+  /* background: url(./imgs/background-stars-v2.jpg); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(autofill, 1fr);
+  justify-items: center;
+}
+.header h2 {
+  color: white;
+  font-family: "Tomorrow", sans-serif;
+  font-size: 3rem;
+  /* text-align: center; */
+  margin-bottom: 2rem;
+  /* font-family: "Bungee Shade", cursive; */
+  /* font-family: "Bungee Inline", cursive; */
+}
+
+.close {
+  background: none;
+  color: white;
+  border: 0;
+}
+
+.gallery {
+  display: grid;
+  /* autofill set as many 100px columns that will fit on screen */
+  grid-template-columns: repeat(auto-fill, 100px);
+  /* must use auto-row and not template rows b/c we dont know how many rows and need to set the implicit track to 100px */
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+}
+
+/* item spans */
+.item {
+  overflow: hidden;
+  display: grid;
+  /* turn each item into a 1x1 grid for overlay later */
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+.item img {
+  grid-column: 1 / -1;
+  grid-row: 1/ -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item__overlay {
+  background: #cf274332;
+  grid-column: 1 /-1;
+  grid-row: 1/ -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transition: 0.2s;
+  /* moves the overlay 100% down off the image */
+  transform: translateY(100%);
+}
+
+.item:hover .item__overlay {
+  transform: translateY(0);
+}
+
+.item__overlay button {
+  background: none;
+  border: 2px solid palevioletred;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+}
+
+.item.v2 {
+  grid-row: span 2;
+}
+.item.v3 {
+  grid-row: span 3;
+}
+.item.v4 {
+  grid-row: span 4;
+}
+.item.h2 {
+  grid-column: span 2;
+}
+.item.h3 {
+  grid-column: span 3;
+}
+.item.h4 {
+  grid-column: span 4;
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay-inner {
+  background: rgba(0, 0, 0, 0.7);
+  width: 700px;
+  padding: 15px;
+}
+
+.overlay img {
+  width: 100%;
+}
