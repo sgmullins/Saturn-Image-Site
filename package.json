@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sgmullins/Saturn-Image-Site/issues"
   },
-  "homepage": "https://github.com/sgmullins/Saturn-Image-Site#readme"
+  "homepage": "https://sgmullins.io/Saturn-Image-Site",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
