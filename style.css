@@ -27,14 +27,12 @@ p {
   grid-template-columns: repeat(autofill, 1fr);
   justify-items: center;
 }
+
 .header h2 {
   color: white;
   font-family: "Tomorrow", sans-serif;
   font-size: 3rem;
-  /* text-align: center; */
   margin-bottom: 2rem;
-  /* font-family: "Bungee Shade", cursive; */
-  /* font-family: "Bungee Inline", cursive; */
 }
 
 .close {
