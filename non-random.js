@@ -10,6 +10,7 @@ const overlayClose = overlay.querySelector(".close");
 const imgs = 31;
 let i = 0;
 
+
 //Never Repeat any images
 function generateHTML([h, v]) {
   for (let j = 1; j < imgs; j++) {
@@ -17,7 +18,7 @@ function generateHTML([h, v]) {
     console.log(i);
     return `
         <div class="item h${h} v${v}">
-          <img src="imgs/saturn-${i}.jpg"> 
+          <img src="./imgs/saturn-${i}.jpg"> 
           <div class="item__overlay">
               <button>View →</button>
           </div>
@@ -43,7 +44,9 @@ function close() {
 }
 
 //Array.from takes a length property and a map function (right now it creates 31 tiles)
-const tiles = Array.from({ length: 21 }, () => [
+const tiles = Array.from({
+  length: 21
+}, () => [
   randomNumber(4),
   randomNumber(4)
 ]).concat([
