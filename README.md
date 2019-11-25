@@ -11,3 +11,5 @@ Mostly they change the way the grid is populated. I did not like the repeating i
 I would like to experiment more with a better way to randomize numbers with no repeats, possibly a <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">fisher-yates shuffle</a>.
 
 Deployed rather hastily at <a href="https://inspiring-archimedes-1db9da.netlify.com/">https://inspiring-archimedes-1db9da.netlify.com/</a>
+
+11/25/19--- found cool star effect at <a href="https://codepen.io/saransh/">CodePen</a> and implemented it on the main index file. Still need to work with it to get the z-index corrected.
